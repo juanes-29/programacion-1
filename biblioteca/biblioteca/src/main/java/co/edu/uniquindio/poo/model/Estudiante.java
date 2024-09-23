@@ -8,6 +8,8 @@ public class Estudiante {
     private String telefono;
     private String correo;
     private HashMap<String, Prestamo> listaPrestamos;
+    
+    //Constructor
     public Estudiante(String nombre, String id, String telefono, String correo) {
         this.nombre = nombre;
         this.id = id;
@@ -15,6 +17,8 @@ public class Estudiante {
         this.correo = correo;
         this.listaPrestamos = new HashMap<String, Prestamo>();
     }
+    
+    //Seters y getters
     public String getNombre() {
         return nombre;
     }

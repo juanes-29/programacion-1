@@ -28,7 +28,7 @@ public class Libro {
         this.listaDetallePrestamos = new LinkedList<DetallePrestamo>();
     }
     
-    
+    //Setters y getters
     public String getCodigo() {
         return codigo;
     }

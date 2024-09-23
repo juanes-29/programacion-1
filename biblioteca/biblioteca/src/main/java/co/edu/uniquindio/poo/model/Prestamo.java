@@ -12,6 +12,8 @@ public class Prestamo {
     private HashMap<String, DetallePrestamo> listaDetallePrestamos;
     private LinkedList<Bibliotecario> bibliotecarioPrestamo;
     private LinkedList<Estudiante> estudiantePrestamo;
+    
+    //constructor
     public Prestamo(LocalDate fechaPrestamo, LocalDate fechaEntrega, String codigo, double total) {
         this.fechaPrestamo = fechaPrestamo;
         this.fechaEntrega = fechaEntrega;
@@ -21,6 +23,8 @@ public class Prestamo {
         this.bibliotecarioPrestamo = new LinkedList<Bibliotecario>();
         this.estudiantePrestamo = new LinkedList<Estudiante>();
     }
+    
+    //setter y getters
     public LocalDate getFechaPrestamo() {
         return fechaPrestamo;
     }

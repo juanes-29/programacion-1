@@ -17,6 +17,11 @@ public class Biblioteca {
         this.listaPrestamos = new HashMap<String, Prestamo>();
     }
 
+    /**
+     * Añade un libro a la lista de libros
+     * @param libro
+     * @return
+     */
     public String añadirLibro(Libro libro){
         String mensaje = "No se ha encontrado el libro";
         if(!listaLibros.contains(libro)){
@@ -26,6 +31,11 @@ public class Biblioteca {
         return mensaje;
     }
 
+    /**
+     * elimina un libro de la lista de libros
+     * @param libro
+     * @return
+     */
     public String eliminarLibro(Libro libro){
         String mensaje = "No se ha encontrado el libro";
         if(!listaLibros.contains(libro)){
@@ -35,6 +45,12 @@ public class Biblioteca {
         return mensaje;
     }
 
+    
+    /**
+     * busca un libro en la lista
+     * @param libro
+     * @return
+     */
     public Libro buscarLibro(Libro libro){
         for (int i = 0; i < listaLibros.size(); i++) {
             if(listaLibros.get(i).equals(libro)){
@@ -44,7 +60,13 @@ public class Biblioteca {
         return null;    
     }
 
-    public String eliminarLibro(Libro libro, Libro libroNuevo){
+    /**
+     * edita un libro de la lista
+     * @param libro
+     * @param libroNuevo
+     * @return
+     */
+    public String editarLibro(Libro libro, Libro libroNuevo){
         String mensaje ="No se encontró el libro";
         if(buscarLibro(libro)!= null){
             listaLibros.set(listaLibros.indexOf(libro),libroNuevo);
@@ -53,6 +75,11 @@ public class Biblioteca {
         return mensaje;
     }
 
+    /**
+     * añade un  bibliotecario a la lista
+     * @param bibliotecario
+     * @return
+     */
     public String añadirBibliotecrio(Bibliotecario bibliotecario) {
         String mensaje = "Bibliotecario ya existe";
         if (!listaBibliotecario.contains(bibliotecario)) {
@@ -62,6 +89,12 @@ public class Biblioteca {
         return mensaje;
     }
 
+    
+    /**
+     * elimina a un bibliotecario de la lista
+     * @param bibliotecario
+     * @return
+     */
     public String eliminarBibliotecrio(Bibliotecario bibliotecario) {
         String mensaje = "Bibliotecario no existe";
         if (listaBibliotecario.contains(bibliotecario)) {
@@ -72,6 +105,12 @@ public class Biblioteca {
         return mensaje;
     }
 
+    
+    /**
+     * busca un bibliotecario en la lista
+     * @param bibliotecario
+     * @return
+     */
     public Bibliotecario buscarBibliotecario(Bibliotecario bibliotecario) {
         for (int i = 0; i < listaBibliotecario.size(); i++) {
             if (listaBibliotecario.get(i).equals(bibliotecario)) {
@@ -81,6 +120,12 @@ public class Biblioteca {
         return null;
     }
 
+    /**
+     * edita un bibliotecario en la lista
+     * @param bibliotecario
+     * @param bibliotecarioNuevo
+     * @return
+     */
     public String editarBibliotecario(Bibliotecario bibliotecario, Bibliotecario bibliotecarioNuevo) {
         String mensaje = "No se encontró el elemento";
         if (buscarBibliotecario(bibliotecario) != null) {
@@ -89,6 +134,12 @@ public class Biblioteca {
         return mensaje;
     }
 
+    
+    /**
+     * añade un estudiante a la lista
+     * @param estudiante
+     * @return
+     */
     public String añadirEstudiante(Estudiante estudiante) {
         String mensaje = "Estudiante ya existe";
         if (listaEstudiante.containsValue(estudiante) == false) {
@@ -99,6 +150,12 @@ public class Biblioteca {
         return mensaje;
     }
 
+    
+    /**
+     * elimina un estudiante de la lista
+     * @param id
+     * @return
+     */
     public String eliminarEstudiante(String id) {
         String mensaje = "Estudiante no existe";
         if (listaEstudiante.get(id) != null) {
@@ -109,10 +166,22 @@ public class Biblioteca {
         return mensaje;
     }
 
+    
+    /**
+     * busca un estudiante en la lista
+     * @param id
+     * @return
+     */
     public Estudiante buscarEstudianteId(String id) {
         return listaEstudiante.get(id);
     }
 
+    /**
+     * edita un estudiante en la lista
+     * @param id
+     * @param estudianteNuevo
+     * @return
+     */
     public String editarEstudiante(String id, Estudiante estudianteNuevo) {
         String mensaje = "No se encontró";
         if (buscarEstudianteId(id) != null) {
@@ -122,6 +191,12 @@ public class Biblioteca {
         return mensaje;
     }
 
+    
+    /**
+     * añade un prestamo a la lista
+     * @param prestamo
+     * @return
+     */
     public String añadirPrestamo(Prestamo prestamo) {
         String mensaje = "Prestamo ya existe";
         if (!listaPrestamos.containsValue(prestamo)) {
@@ -132,6 +207,12 @@ public class Biblioteca {
         return mensaje;
     }
 
+    
+    /**
+     * elimina un prestamo de la lista
+     * @param codigo
+     * @return
+     */
     public String eliminarPrestamo(String codigo) {
         String mensaje = "Prestamo no existe";
         if (listaPrestamos.get(codigo) == null) {
@@ -142,10 +223,23 @@ public class Biblioteca {
         return mensaje;
     }
 
+    
+    /**
+     * busca un prestamo de la lista
+     * @param codigo
+     * @return
+     */
     public Prestamo buscarPrestamoCodigo(String codigo) {
         return listaPrestamos.get(codigo);
     }
 
+    
+    /**
+     * edita un prestamo de la lista
+     * @param codigo
+     * @param prestamoNuevo
+     * @return
+     */
     public String editarPrestamo(String codigo, Prestamo prestamoNuevo) {
         String mensaje = "No se encontró";
         if (buscarEstudianteId(codigo) != null) {
@@ -155,7 +249,7 @@ public class Biblioteca {
         return mensaje;
     }
 
-    
+
 
     /**
      * setters and getters

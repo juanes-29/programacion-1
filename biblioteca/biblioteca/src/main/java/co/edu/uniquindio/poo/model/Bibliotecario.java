@@ -10,6 +10,7 @@ public class Bibliotecario {
     private double salario;
     private LinkedList<Prestamo> listaPrestamos;
 
+    //constructor
     public Bibliotecario(String nombre, String id, String telefono, String correo, double salario){
         this.nombre = nombre;
         this.id = id;
@@ -19,6 +20,7 @@ public class Bibliotecario {
         this.listaPrestamos = new LinkedList<Prestamo>();
     }
 
+    //Setters y getters
     public String getNombre() {
         return nombre;
     }
